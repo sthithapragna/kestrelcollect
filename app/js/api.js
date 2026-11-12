@@ -11,7 +11,7 @@ async function getJson(path) {
 
 export async function getStores() {
   const stores = isSample
-    ? await getJson("/sample/stores.json")
+    ? await getJson(new URL("../sample/stores.json", import.meta.url))
     : await getJson(`${API_BASE}/api/stores`);
   return stores.filter(s => !s.hidden);
 }
