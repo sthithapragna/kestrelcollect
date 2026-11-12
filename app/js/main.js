@@ -1,5 +1,5 @@
 import { getStores, getSlots, isSample } from "./api.js";
-import { bookableDays, formatDay, formatTime, CLOSE_MINUTES } from "./time.js";
+import { bookableDays, formatDay, formatTime, CLOSE_MINUTES,collectionHours } from "./time.js";
 
 const view = document.getElementById("view");
 let storesCache = null;
@@ -50,6 +50,7 @@ async function home() {
         <li><a class="store-card" href="/stores/${s.store_id}" data-link>
           <span class="store-name">${esc(s.name)}</span>
           <span class="store-meta">${esc(s.region)} &middot; ${esc(s.format)}</span>
+          <span class="store-meta">Collection ${collectionHours()}</span>
           <span class="store-go">See slots</span>
         </a></li>`).join("")}
     </ul>`;

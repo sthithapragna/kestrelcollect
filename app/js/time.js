@@ -45,6 +45,12 @@ export function formatTime(date) {
   return new Intl.DateTimeFormat("en-GB", { timeZone: TZ, hour: "2-digit", minute: "2-digit" }).format(date);
 }
 
+// Collection hours for the store list: "08:00 to 20:00".
+export function collectionHours() {
+  const pad = h => String(h).padStart(2, "0");
+  return `${pad(FIRST_HOUR)}:00 to ${pad(LAST_HOUR + 1)}:00`;
+}
+
 export function formatDay(dateStr, style = "short") {
   const noon = new Date(`${dateStr}T12:00:00Z`);
   const opts = style === "long"
