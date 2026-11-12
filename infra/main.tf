@@ -2,7 +2,7 @@
 # every resource tagged Project = kestrel-collect.
 resource "aws_resourcegroups_group" "collect" {
   name        = "collect-all"
-  description = "Everything Kestrel Collect runs on"
+  description = "Everything Kestrel Collect runs on - in one place"
 
   resource_query {
     query = jsonencode({
