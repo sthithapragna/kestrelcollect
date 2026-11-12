@@ -10,6 +10,7 @@ __pycache__/
 *.tfstate.*
 *.tfplan
 crash.log
+infra/backend.hcl
 
 # Editors and operating systems
 .vscode/*
