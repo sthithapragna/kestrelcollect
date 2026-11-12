@@ -43,7 +43,7 @@ async function home() {
   view.innerHTML = `
     <section class="intro">
       <h1>Book a collection slot</h1>
-      <p>Choose your store, pick a one-hour slot, and collect your shopping when it suits you. Collection is free.</p>
+      <p>Choose your store, pick a one-hour slot, and collect your shopping when it suits you. Collection is free, seven days a week.</p>
     </section>
     <ul class="stores">
       ${list.map(s => `
